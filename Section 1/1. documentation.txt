@@ -1,0 +1,24 @@
+# Section 1 Components
+
+## Files included:
+
+	1. documentation
+	2. process_dataset.ipynb - python codes to process dataset with description and formatting
+	3. process_dataset.py - python codes to process dataset (used for scheduling)
+	4. new_dataset - new dataset that is an output from the processing
+	5. cron commands - contains the cron commands for scheduling
+
+## Tasks breakdown:
+
+	1. Processing
+	- File name: dataset_schedule.py
+	- Output: new_dataset.csv
+	- Tools used: Jupyter, Visual Studio Code, Python (Libraries: Pandas, Numpy)
+	- Reason: Widely used, functions within library are useful
+	- Alternatives: Coding in other languages that can handle CSV files such as R
+
+	2. Scheduling
+	- Tools used: Ubuntu (cron)
+	- Reason: Simple
+	- Improvements: Use command "whereis python3" and insert directory instead
+	- Alternatives: Task Scheduler (Window's in-built app)
