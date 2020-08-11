@@ -1,0 +1,2 @@
+crontab -e
+0 1 * * * cd Desktop && python3 process_dataset.py >> process_dataset.out
