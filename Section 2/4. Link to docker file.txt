@@ -1,1 +1,7 @@
 https://drive.google.com/file/d/1IwY5Oh6Bc6ukPFkAvEOcg-ptDp2Jb9dx/view?usp=sharing
+
+Codes used for docker/postgres container:
+docker pull postgres:alpine
+docker run --name test -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:alpine
+docker exec -it test bash
+psql -h localhost -p 5432 -U postgres
