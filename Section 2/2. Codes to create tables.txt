@@ -1,0 +1,56 @@
+# Customer Table
+create table customer (
+	id serial primary key,
+	name varchar(50) not null,
+	phone varchar(25) not null
+);
+
+# Salesperson Table
+create table salesperson (
+	id serial primary key,
+	name varchar(50) not null
+);
+
+# Variant Table
+create table variant (
+	model_variant varchar(50) not null primary key,
+	manufacturer varchar(50) not null,
+	model_name varchar(50) not null,
+	weight integer not null,
+	engine_cubic_capacity integer not null
+);
+
+# Car Table
+create table car (
+	serial_number varchar(50) not null primary key,
+	model_variant varchar(50) not null,
+	condition varchar(25) not null,
+	price float not null,
+	constraint car_fkey1
+		foreign key(model_variant)
+		references variant(model_variant)
+);
+
+# Sale Table
+create table sale (
+	id serial primary key,
+	sale_datetime timestamp not null,
+	customer_id integer not null,
+	salesperson_id integer not null,
+	serial_number varchar(50) not null
+);
+
+alter table sale
+add constraint sale_fkey1
+foreign key (customer_id)
+references customer(id);
+
+alter table sale
+add constraint sale_fkey2
+foreign key (salesperson_id)
+references salesperson(id);
+
+alter table sale
+add constraint sale_fkey3
+foreign key (serial_number)
+references car(serial_number);
