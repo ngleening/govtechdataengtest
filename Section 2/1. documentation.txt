@@ -1,0 +1,8 @@
+# Section 2 Components
+
+## Files included:
+
+	1. documentation
+	2. ERD - Entity relationship diagram of the database
+	3. Codes to create tables - SQL statements to create tables and add constraints
+	4. Link to docker file - Uploaded the docker file to Google drive as it is too big to push in Git
